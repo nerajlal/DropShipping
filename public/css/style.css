@@ -2524,3 +2524,80 @@ select.form-control {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Deals Banner Two-Column ===== */
+.deals-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.deals-content {
+    flex: 1;
+}
+
+.deals-visual {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.coupon-display {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 24px 32px;
+    width: 100%;
+}
+
+.coupon-code {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.coupon-value {
+    font-size: 1rem;
+    color: #a78bfa;
+    font-weight: 600;
+}
+
+.deals-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.deal-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.88rem;
+}
+
+.deal-feature i {
+    color: #34d399;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .deals-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .deals-visual {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+}

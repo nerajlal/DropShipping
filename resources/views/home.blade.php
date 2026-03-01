@@ -143,6 +143,17 @@
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
+            <div class="deals-visual">
+                <div class="coupon-display">
+                    <div class="coupon-code">WELCOME10</div>
+                    <div class="coupon-value">10% OFF</div>
+                </div>
+                <div class="deals-features">
+                    <div class="deal-feature"><i class="fas fa-check-circle"></i> Free shipping on ₹999+</div>
+                    <div class="deal-feature"><i class="fas fa-check-circle"></i> No hidden charges</div>
+                    <div class="deal-feature"><i class="fas fa-check-circle"></i> 30-day easy returns</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

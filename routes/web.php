@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 
+use App\Http\Controllers\Admin\AdminPageController;
+
 // Public routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -59,4 +61,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     Route::get('/orders', [AdminOrderController::class, 'index'])->name('orders.index');
     Route::get('/orders/{id}', [AdminOrderController::class, 'show'])->name('orders.show');
     Route::patch('/orders/{id}/status', [AdminOrderController::class, 'updateStatus'])->name('orders.status');
+
+    // New Shopify-style pages
+    Route::get('/customers', [AdminPageController::class, 'customers'])->name('customers');
+    Route::get('/analytics', [AdminPageController::class, 'analytics'])->name('analytics');
+    Route::get('/discounts', [AdminPageController::class, 'discounts'])->name('discounts');
+    Route::get('/content', [AdminPageController::class, 'content'])->name('content');
+    Route::get('/settings', [AdminPageController::class, 'settings'])->name('settings');
 });

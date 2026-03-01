@@ -15,16 +15,30 @@
         <aside class="admin-sidebar">
             <div class="sidebar-header">
                 <div class="logo-icon"><i class="fas fa-bolt"></i></div>
-                <span class="logo-text">Tech<span style="color:#a29bfe;">Drop</span></span>
+                <span class="logo-text">Tech<span style="color:#008060;">Drop</span></span>
                 <small>ADMIN</small>
             </div>
             <nav class="sidebar-nav">
-                <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                <a href="{{ route('admin.products.index') }}" class="{{ request()->routeIs('admin.products.*') ? 'active' : '' }}"><i class="fas fa-box"></i> Products</a>
-                <a href="{{ route('admin.orders.index') }}" class="{{ request()->routeIs('admin.orders.*') ? 'active' : '' }}"><i class="fas fa-shopping-cart"></i> Orders</a>
+                <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"><i class="fas fa-home"></i> <span>Home</span></a>
+                <a href="{{ route('admin.orders.index') }}" class="{{ request()->routeIs('admin.orders.*') ? 'active' : '' }}"><i class="fas fa-shopping-bag"></i> <span>Orders</span></a>
+                <a href="{{ route('admin.products.index') }}" class="{{ request()->routeIs('admin.products.*') ? 'active' : '' }}"><i class="fas fa-tag"></i> <span>Products</span></a>
+                <a href="{{ route('admin.customers') }}" class="{{ request()->routeIs('admin.customers') ? 'active' : '' }}"><i class="fas fa-users"></i> <span>Customers</span></a>
+                <a href="{{ route('admin.analytics') }}" class="{{ request()->routeIs('admin.analytics') ? 'active' : '' }}"><i class="fas fa-chart-line"></i> <span>Analytics</span></a>
+
                 <div class="sidebar-divider"></div>
-                <a href="{{ route('home') }}" target="_blank"><i class="fas fa-external-link-alt"></i> View Store</a>
-                <form action="{{ route('logout') }}" method="POST">@csrf<button type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button></form>
+
+                <a href="{{ route('admin.discounts') }}" class="{{ request()->routeIs('admin.discounts') ? 'active' : '' }}"><i class="fas fa-percent"></i> <span>Discounts</span></a>
+                <a href="{{ route('admin.content') }}" class="{{ request()->routeIs('admin.content') ? 'active' : '' }}"><i class="fas fa-file-alt"></i> <span>Content</span></a>
+
+                <div class="sidebar-divider"></div>
+
+                <a href="{{ route('home') }}" target="_blank"><i class="fas fa-external-link-alt"></i> <span>Online Store</span></a>
+                <a href="{{ route('admin.settings') }}" class="{{ request()->routeIs('admin.settings') ? 'active' : '' }}"><i class="fas fa-cog"></i> <span>Settings</span></a>
+
+                <div style="flex:1;"></div>
+
+                <div class="sidebar-divider"></div>
+                <form action="{{ route('logout') }}" method="POST">@csrf<button type="submit"><i class="fas fa-sign-out-alt"></i> <span>Log out</span></button></form>
             </nav>
         </aside>
         <main class="admin-main">
