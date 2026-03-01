@@ -1,11 +1,11 @@
-<div class="product-card">
+<div class="product-card" data-animate="fade-up">
     <div class="product-image">
-        <img src="{{ $product->image }}" alt="{{ $product->name }}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300/1a1a2e/6c5ce7?text=TechDrop'">
+        <img src="{{ $product->image }}" alt="{{ $product->name }}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300/f0f0f5/6366f1?text=TechDrop'">
         @if($product->discount_percent)
             <span class="product-badge badge-sale">-{{ $product->discount_percent }}%</span>
         @endif
-        <div class="product-actions">
-            <button class="add-to-cart-btn" data-product-id="{{ $product->id }}" title="Add to Cart"><i class="fas fa-shopping-bag"></i></button>
+        <div class="product-overlay">
+            <a href="{{ route('products.show', $product->slug) }}" class="overlay-btn"><i class="fas fa-eye"></i> Quick View</a>
         </div>
     </div>
     <div class="product-info">
